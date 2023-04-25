@@ -55,7 +55,7 @@ end
 Construct a wrapper around a Pluto element that is a CLI option called
 --<name> if not run from Pluto.
 
-Arguments:
+Keyword arguments:
 - `required`: if passing this option is required if running from CLI. If
     `required == false` and the option is not passed, the `initial_value`of the 
     PlutoUI element will be taken.
