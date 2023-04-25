@@ -1,10 +1,10 @@
 # PlutoArgs.jl
 
-A tiny library that can wrap PlutoUI.jl elements so they can be used as command line arguments as well if the notebook is run directly from CLI.
+A tiny library that can wrap PlutoUI.jl elements so they can be used as command line arguments too.
 
 ### Usage
 
-The notebook `run_in_pluto_or_cli.jl` has a few examples that you can try.
+Wrap `Arg(<option name>, <control element>)` around your control elements.
 
 ```
 @bind enabled Arg("enabled", CheckBox())
@@ -15,6 +15,15 @@ Run this in Pluto to get UI controls, or from the CLI like this:
 ```
 julia <path to script> --enabled true --vegetable potato carrot
 ```
+
+All `Arg` keywords (see docstring for more info)
+```
+    Arg(name, element; required=true, short_name=nothing, type=nothing)
+```
+
+### Sample notebook
+
+The notebook `run_in_pluto_or_cli.jl` has a few examples that you can try.
 
 ### Caveats
 
